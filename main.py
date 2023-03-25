@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+import numpy as np
 def isfloat(num):
     try:
         float(num)
@@ -40,3 +42,8 @@ else:
     posans=(-(b)+rt)/(2*a)
     negans=(-(b)-rt)/(2*a)
     print(f"There are 2 x=intercepts at : {posans} and {negans}")
+x = np.linspace(-10, 10, 1000)
+y = a*x**2+b*x+c  
+fig, ax = plt.subplots()
+ax.plot(x, y)
+plt.show()
